@@ -40,7 +40,9 @@
 <!-- fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 
 
 <!-- Link Swiper's CSS -->
@@ -49,13 +51,16 @@
 <!-- simpleBar -->
 <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 
+<!-- leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 <link rel="stylesheet" href="./css/main.css" />
 
 </head>
 
 <body>
 
-    <header class="header ">
+    <header class="header fixed">
     <div class="header__container">
         <div class="logo__container">
             <a href="/index.html" class="logo">
@@ -535,19 +540,52 @@
         </button>
     </div>
 
-    <div class="header__dropdown_links"  data-menu="about" style="display: none;">
+    <div class="header__dropdown_links" data-menu="about" style="display: none;">
         <div class="header__dropdown_links__container">
             <div class="col col__links">
                 <h3>About us</h3>
                 <nav>
                     <ul>
-                        <li><a href="">General information</a></li>
-                        <li><a href="">Our team</a></li>
-                        <li><a href="">Participants</a></li>
-                        <li><a href="">How to join?</a></li>
-                        <li><a href="">Useful information</a></li>
+                        <li><a href="/general-information.html">General information</a></li>
+                        <li><a href="/our-team.html">Our team</a></li>
+                        <li><a href="/participants.html">Participants</a></li>
+                        <li><a href="/how-to-join-the-registry.html">How to join?</a></li>
+                        <button class='footer__usefull-info__drop'>
+                            <div class="text">Useful information</div>
+                            <div class="icon"></div>
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M3.34088 6.24713C3.67038 5.91762 4.20462 5.91762 4.53412 6.24713L9 10.713L13.4659 6.24713C13.7954 5.91762 14.3296 5.91762 14.6591 6.24713C14.9886 6.57663 14.9886 7.11087 14.6591 7.44037L9.59662 12.5029C9.26712 12.8324 8.73288 12.8324 8.40338 12.5029L3.34088 7.44037C3.01137 7.11087 3.01137 6.57663 3.34088 6.24713Z" fill="currentColor"/>
+</g>
+</svg>
+
+                        </button>
+                        <div class="dropdown" style="display: none;">
+                            <a href="/links.html" class='link'>
+                                <div class="icon">
+                                    <svg  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M7.3322 8.8432C7.25271 8.92851 7.20944 9.04133 7.2115 9.15791C7.21355 9.27449 7.26078 9.38573 7.34323 9.46817C7.42568 9.55062 7.53691 9.59785 7.65349 9.59991C7.77007 9.60196 7.8829 9.55869 7.9682 9.4792L10.6682 6.7792C10.7525 6.69482 10.7998 6.58045 10.7998 6.4612C10.7998 6.34195 10.7525 6.22758 10.6682 6.1432L7.9682 3.4432C7.8829 3.36371 7.77007 3.32044 7.65349 3.32249C7.53691 3.32455 7.42568 3.37178 7.34323 3.45423C7.26078 3.53667 7.21355 3.64791 7.2115 3.76449C7.20944 3.88107 7.25271 3.99389 7.3322 4.0792L9.2642 6.0112L5.5502 6.0112C4.6352 6.0112 3.75768 5.64772 3.11068 5.00072C2.46368 4.35372 2.1002 3.4762 2.1002 2.5612C2.1002 2.44185 2.05279 2.32739 1.9684 2.243C1.88401 2.15861 1.76955 2.1112 1.6502 2.1112C1.53085 2.1112 1.41639 2.15861 1.332 2.243C1.24761 2.32739 1.2002 2.44185 1.2002 2.5612C1.2002 3.71489 1.6585 4.82133 2.47429 5.63711C3.29007 6.4529 4.39651 6.9112 5.5502 6.9112L9.2642 6.9112L7.3322 8.8432Z" fill="currentColor"/>
+</g>
+</svg>
+
+                                </div>
+                                <div class="text">Links</div>
+                            </a>
+                            <a href="/documetns.html" class='link'>
+                                <div class="icon">
+                                    <svg  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M7.3322 8.8432C7.25271 8.92851 7.20944 9.04133 7.2115 9.15791C7.21355 9.27449 7.26078 9.38573 7.34323 9.46817C7.42568 9.55062 7.53691 9.59785 7.65349 9.59991C7.77007 9.60196 7.8829 9.55869 7.9682 9.4792L10.6682 6.7792C10.7525 6.69482 10.7998 6.58045 10.7998 6.4612C10.7998 6.34195 10.7525 6.22758 10.6682 6.1432L7.9682 3.4432C7.8829 3.36371 7.77007 3.32044 7.65349 3.32249C7.53691 3.32455 7.42568 3.37178 7.34323 3.45423C7.26078 3.53667 7.21355 3.64791 7.2115 3.76449C7.20944 3.88107 7.25271 3.99389 7.3322 4.0792L9.2642 6.0112L5.5502 6.0112C4.6352 6.0112 3.75768 5.64772 3.11068 5.00072C2.46368 4.35372 2.1002 3.4762 2.1002 2.5612C2.1002 2.44185 2.05279 2.32739 1.9684 2.243C1.88401 2.15861 1.76955 2.1112 1.6502 2.1112C1.53085 2.1112 1.41639 2.15861 1.332 2.243C1.24761 2.32739 1.2002 2.44185 1.2002 2.5612C1.2002 3.71489 1.6585 4.82133 2.47429 5.63711C3.29007 6.4529 4.39651 6.9112 5.5502 6.9112L9.2642 6.9112L7.3322 8.8432Z" fill="currentColor"/>
+</g>
+</svg>
+
+                                </div>
+                                <div class="text">Documents</div>
+                            </a>
+                        </div>
                         <li><a href="">Working groups & committees</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="/faqs.html">FAQ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -556,8 +594,8 @@
             </div>
         </div>
     </div>
-    <div class="header__dropdown_links" data-menu="collection"style="display: none;">
-        <div class="header__dropdown_links__container"  >
+    <div class="header__dropdown_links" data-menu="collection" style="display: none;">
+        <div class="header__dropdown_links__container">
             <div class="col col__links">
                 <h3>Data collection</h3>
                 <nav>
@@ -574,8 +612,8 @@
             </div>
         </div>
     </div>
-    <div class="header__dropdown_links" data-menu="projects"style="display: none;">
-        <div class="header__dropdown_links__container"  >
+    <div class="header__dropdown_links" data-menu="projects" style="display: none;">
+        <div class="header__dropdown_links__container">
             <div class="col col__links">
                 <h3>Scientific projects</h3>
                 <nav>
@@ -592,8 +630,8 @@
             </div>
         </div>
     </div>
-    <div class="header__dropdown_links" data-menu="publications"style="display: none;">
-        <div class="header__dropdown_links__container"  >
+    <div class="header__dropdown_links" data-menu="publications" style="display: none;">
+        <div class="header__dropdown_links__container">
             <div class="col col__links">
                 <h3>publications</h3>
                 <nav>
@@ -613,7 +651,8 @@
                         </picture>
                     </div>
 
-                        <h4>Nonsense mutations accelerate lung disease and decrease survival of cystic fibrosis children </h4>
+                    <h4>Nonsense mutations accelerate lung disease and decrease survival of cystic fibrosis children
+                    </h4>
 
                 </article>
                 <!-- <img src="assets/images/index/header/link.png" alt=""> -->
@@ -1007,7 +1046,73 @@
                     data for epidemiological research and to facilitate public health planning.</p>
             </div>
             <div class="col mobile-map">
-                <div class="map"></div>
+                <div class="map"> <div class="map__container">
+    <div class='map__leaflet' id="map"></div>
+    <div class="map__controls">
+        <button class='map-zoom-fullscreen'>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M3 3.75C3 3.33579 3.33579 3 3.75 3H9C9.41421 3 9.75 3.33579 9.75 3.75C9.75 4.16421 9.41421 4.5 9 4.5H5.55946L10.2803 9.2196C10.5732 9.51246 10.5733 9.98733 10.2804 10.2803C9.98754 10.5732 9.51267 10.5733 9.21974 10.2804L4.5 5.56186V9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9V3.75ZM14.25 3.75C14.25 3.33579 14.5858 3 15 3H20.25C20.6642 3 21 3.33579 21 3.75V9C21 9.41421 20.6642 9.75 20.25 9.75C19.8358 9.75 19.5 9.41421 19.5 9V5.55946L14.7804 10.2803C14.4875 10.5732 14.0127 10.5733 13.7197 10.2804C13.4268 9.98754 13.4267 9.51267 13.7196 9.21974L18.4381 4.5H15C14.5858 4.5 14.25 4.16421 14.25 3.75ZM10.2803 13.7196C10.5732 14.0125 10.5733 14.4873 10.2804 14.7803L5.56186 19.5H9C9.41421 19.5 9.75 19.8358 9.75 20.25C9.75 20.6642 9.41421 21 9 21H3.75C3.33579 21 3 20.6642 3 20.25V15C3 14.5858 3.33579 14.25 3.75 14.25C4.16421 14.25 4.5 14.5858 4.5 15V18.4405L9.2196 13.7197C9.51246 13.4268 9.98733 13.4267 10.2803 13.7196ZM13.7196 13.7197C14.0125 13.4268 14.4873 13.4267 14.7803 13.7196L19.5 18.4381V15C19.5 14.5858 19.8358 14.25 20.25 14.25C20.6642 14.25 21 14.5858 21 15V20.25C21 20.6642 20.6642 21 20.25 21H15C14.5858 21 14.25 20.6642 14.25 20.25C14.25 19.8358 14.5858 19.5 15 19.5H18.4405L13.7197 14.7804C13.4268 14.4875 13.4267 14.0127 13.7196 13.7197Z" fill="currentColor"/>
+</g>
+</svg>
+
+            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M12.9773 5.02252L8.99987 9M8.99987 9L5.0224 12.9775M8.99987 9L5.0224 5.02252M8.99987 9L12.9773 12.9775" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+        </button>
+
+
+        <div class="block">
+            <button class='map-zoom-in'>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 12H12M12 12H4.5M12 12V4.5M12 12V19.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </button>
+            <button class='map-zoom-out'>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M19.5 12H12H4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+
+            </button>
+        </div>
+    </div>
+
+    <div class="map__data_container">
+        <div class="map__data_container__heading">
+            <h4 class='name'>Poland</h4>
+            <h4 class='year'>2024</h4>
+
+            <button><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M12.9773 5.02252L8.99987 9M8.99987 9L5.0224 12.9775M8.99987 9L5.0224 5.02252M8.99987 9L12.9773 12.9775" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+</button>
+        </div>
+
+        <div class="map__data_container__body" data-simplebar data-simplebar-auto-hide="false">
+            <div class='content'>
+                <div class="item">
+                    <div class="key">CentreType</div>
+                    <div class="value">National Registry</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map__data_container__footer">
+
+        </div>
+
+
+    </div>
+</div></div>
             </div>
             <div class="col-grid with-items">
                 <div class="block">
@@ -1030,7 +1135,73 @@
             </div>
         </div>
         <div class="col desktop-map">
-            <div class="map"></div>
+            <div class="map"><div class="map__container">
+    <div class='map__leaflet' id="map"></div>
+    <div class="map__controls">
+        <button class='map-zoom-fullscreen'>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M3 3.75C3 3.33579 3.33579 3 3.75 3H9C9.41421 3 9.75 3.33579 9.75 3.75C9.75 4.16421 9.41421 4.5 9 4.5H5.55946L10.2803 9.2196C10.5732 9.51246 10.5733 9.98733 10.2804 10.2803C9.98754 10.5732 9.51267 10.5733 9.21974 10.2804L4.5 5.56186V9C4.5 9.41421 4.16421 9.75 3.75 9.75C3.33579 9.75 3 9.41421 3 9V3.75ZM14.25 3.75C14.25 3.33579 14.5858 3 15 3H20.25C20.6642 3 21 3.33579 21 3.75V9C21 9.41421 20.6642 9.75 20.25 9.75C19.8358 9.75 19.5 9.41421 19.5 9V5.55946L14.7804 10.2803C14.4875 10.5732 14.0127 10.5733 13.7197 10.2804C13.4268 9.98754 13.4267 9.51267 13.7196 9.21974L18.4381 4.5H15C14.5858 4.5 14.25 4.16421 14.25 3.75ZM10.2803 13.7196C10.5732 14.0125 10.5733 14.4873 10.2804 14.7803L5.56186 19.5H9C9.41421 19.5 9.75 19.8358 9.75 20.25C9.75 20.6642 9.41421 21 9 21H3.75C3.33579 21 3 20.6642 3 20.25V15C3 14.5858 3.33579 14.25 3.75 14.25C4.16421 14.25 4.5 14.5858 4.5 15V18.4405L9.2196 13.7197C9.51246 13.4268 9.98733 13.4267 10.2803 13.7196ZM13.7196 13.7197C14.0125 13.4268 14.4873 13.4267 14.7803 13.7196L19.5 18.4381V15C19.5 14.5858 19.8358 14.25 20.25 14.25C20.6642 14.25 21 14.5858 21 15V20.25C21 20.6642 20.6642 21 20.25 21H15C14.5858 21 14.25 20.6642 14.25 20.25C14.25 19.8358 14.5858 19.5 15 19.5H18.4405L13.7197 14.7804C13.4268 14.4875 13.4267 14.0127 13.7196 13.7197Z" fill="currentColor"/>
+</g>
+</svg>
+
+            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M12.9773 5.02252L8.99987 9M8.99987 9L5.0224 12.9775M8.99987 9L5.0224 5.02252M8.99987 9L12.9773 12.9775" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+        </button>
+
+
+        <div class="block">
+            <button class='map-zoom-in'>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 12H12M12 12H4.5M12 12V4.5M12 12V19.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            </button>
+            <button class='map-zoom-out'>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M19.5 12H12H4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+
+            </button>
+        </div>
+    </div>
+
+    <div class="map__data_container">
+        <div class="map__data_container__heading">
+            <h4 class='name'>Poland</h4>
+            <h4 class='year'>2024</h4>
+
+            <button><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M12.9773 5.02252L8.99987 9M8.99987 9L5.0224 12.9775M8.99987 9L5.0224 5.02252M8.99987 9L12.9773 12.9775" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+</button>
+        </div>
+
+        <div class="map__data_container__body" data-simplebar data-simplebar-auto-hide="false">
+            <div class='content'>
+                <div class="item">
+                    <div class="key">CentreType</div>
+                    <div class="value">National Registry</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map__data_container__footer">
+
+        </div>
+
+
+    </div>
+</div></div>
         </div>
     </div>
 </section>
@@ -1913,7 +2084,20 @@
 
     
     </main>
-    <footer class="footer">
+    <footer class="footer @@class">
+    <div class="footer__breadcrumps">
+        <a href=""><svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M15.375 13.977V9.27052C15.375 8.89127 15.2968 8.51598 15.1452 8.16749C14.9936 7.819 14.7717 7.50459 14.4931 7.24338L9.97608 3.00946C9.7128 2.76263 9.36351 2.625 9.00035 2.625C8.6372 2.625 8.28791 2.76263 8.02462 3.00946L3.50687 7.24338C3.22825 7.50459 3.00639 7.819 2.85479 8.16749C2.70318 8.51598 2.625 8.89127 2.625 9.27052V13.977C2.625 14.3478 2.77426 14.7033 3.03993 14.9655C3.30561 15.2277 3.66594 15.375 4.04167 15.375H13.9583C14.3341 15.375 14.6944 15.2277 14.9601 14.9655C15.2257 14.7033 15.375 14.3478 15.375 13.977Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Line 63" d="M5.625 12.375H12.375" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+</g>
+</svg>
+</a>
+        <div class="separator"></div>
+        <a href="">Previous page</a>
+        <div class="separator"></div>
+        <a href="">Current page</a>
+    </div>
     <div class="footer__container footer__container__links">
         <div class="col logo">
             <div class="grid">
@@ -2527,6 +2711,42 @@
                                 <li><a href="">Our team</a></li>
                                 <li><a href="">Participants</a></li>
                                 <li><a href="">How to join?</a></li>
+                                <li>
+                                    <button class='footer__usefull-info__drop'>
+                                        <div class="text">Useful information</div>
+                                        <div class="icon"></div>
+                                        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M3.34088 6.24713C3.67038 5.91762 4.20462 5.91762 4.53412 6.24713L9 10.713L13.4659 6.24713C13.7954 5.91762 14.3296 5.91762 14.6591 6.24713C14.9886 6.57663 14.9886 7.11087 14.6591 7.44037L9.59662 12.5029C9.26712 12.8324 8.73288 12.8324 8.40338 12.5029L3.34088 7.44037C3.01137 7.11087 3.01137 6.57663 3.34088 6.24713Z" fill="currentColor"/>
+</g>
+</svg>
+
+                                    </button>
+                                    <div class="dropdown" style="display: none;">
+                                        <a href="/links.html" class='link'>
+                                            <div class="icon">
+                                                <svg  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M7.3322 8.8432C7.25271 8.92851 7.20944 9.04133 7.2115 9.15791C7.21355 9.27449 7.26078 9.38573 7.34323 9.46817C7.42568 9.55062 7.53691 9.59785 7.65349 9.59991C7.77007 9.60196 7.8829 9.55869 7.9682 9.4792L10.6682 6.7792C10.7525 6.69482 10.7998 6.58045 10.7998 6.4612C10.7998 6.34195 10.7525 6.22758 10.6682 6.1432L7.9682 3.4432C7.8829 3.36371 7.77007 3.32044 7.65349 3.32249C7.53691 3.32455 7.42568 3.37178 7.34323 3.45423C7.26078 3.53667 7.21355 3.64791 7.2115 3.76449C7.20944 3.88107 7.25271 3.99389 7.3322 4.0792L9.2642 6.0112L5.5502 6.0112C4.6352 6.0112 3.75768 5.64772 3.11068 5.00072C2.46368 4.35372 2.1002 3.4762 2.1002 2.5612C2.1002 2.44185 2.05279 2.32739 1.9684 2.243C1.88401 2.15861 1.76955 2.1112 1.6502 2.1112C1.53085 2.1112 1.41639 2.15861 1.332 2.243C1.24761 2.32739 1.2002 2.44185 1.2002 2.5612C1.2002 3.71489 1.6585 4.82133 2.47429 5.63711C3.29007 6.4529 4.39651 6.9112 5.5502 6.9112L9.2642 6.9112L7.3322 8.8432Z" fill="currentColor"/>
+</g>
+</svg>
+
+                                            </div>
+                                            <div class="text">Links</div>
+                                        </a>
+                                        <a href="" class='link'>
+                                            <div class="icon">
+                                                <svg  viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons">
+<path id="Vector" d="M7.3322 8.8432C7.25271 8.92851 7.20944 9.04133 7.2115 9.15791C7.21355 9.27449 7.26078 9.38573 7.34323 9.46817C7.42568 9.55062 7.53691 9.59785 7.65349 9.59991C7.77007 9.60196 7.8829 9.55869 7.9682 9.4792L10.6682 6.7792C10.7525 6.69482 10.7998 6.58045 10.7998 6.4612C10.7998 6.34195 10.7525 6.22758 10.6682 6.1432L7.9682 3.4432C7.8829 3.36371 7.77007 3.32044 7.65349 3.32249C7.53691 3.32455 7.42568 3.37178 7.34323 3.45423C7.26078 3.53667 7.21355 3.64791 7.2115 3.76449C7.20944 3.88107 7.25271 3.99389 7.3322 4.0792L9.2642 6.0112L5.5502 6.0112C4.6352 6.0112 3.75768 5.64772 3.11068 5.00072C2.46368 4.35372 2.1002 3.4762 2.1002 2.5612C2.1002 2.44185 2.05279 2.32739 1.9684 2.243C1.88401 2.15861 1.76955 2.1112 1.6502 2.1112C1.53085 2.1112 1.41639 2.15861 1.332 2.243C1.24761 2.32739 1.2002 2.44185 1.2002 2.5612C1.2002 3.71489 1.6585 4.82133 2.47429 5.63711C3.29007 6.4529 4.39651 6.9112 5.5502 6.9112L9.2642 6.9112L7.3322 8.8432Z" fill="currentColor"/>
+</g>
+</svg>
+
+                                            </div>
+                                            <div class="text">Documents</div>
+                                        </a>
+                                    </div>
+                                </li>
                                 <li><a href="">Useful information</a></li>
                                 <li><a href="">Working groups & committees</a></li>
                                 <li><a href="">FAQ</a></li>
@@ -2686,16 +2906,21 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- simple-bar -->
-<!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
-<!-- scrollTriger -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script> -->
 
 <!-- gsap -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<!-- scrollTriger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 
 <!-- jquery validate -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+<!-- leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 
 <!-- main-js -->
 <script src="./js/index.js"></script>

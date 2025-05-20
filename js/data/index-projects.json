@@ -1,0 +1,34 @@
+[
+    {
+        "bg": "rgba(221, 242, 246, 0.32)",
+        "bg-tag": "#99D9E4",
+        "tag": "Project 01",
+        "name": "ENRICH",
+        "src": "assets/images/index/projects/img1.png",
+        "text": "Project to enrich the ECFSPR with longitudinal quantitative structural lung data from chest computed tomography (CT) scans."
+    },
+    {
+         "bg": "rgba(221, 242, 246, 0.32)",
+        "bg-tag": "#FCC5C5",
+        "tag": "Project 02",
+        "name": "CFSPID",
+        "src": "assets/images/index/projects/img2.png",
+        "text": "Project dedicated to newborn screening for cystic fibrosis. When a newborn screening result is positive, but cystic fibrosis is not confirmed by other methods."
+    },
+    {
+         "bg": "rgba(221, 242, 246, 0.32)",
+        "bg-tag": "#AFD89C",
+        "tag": "Project 03",
+        "name": "PMV studies",
+        "src": "assets/images/index/projects/img3.png",
+        "text": "Project on monitoring new medicines that must be monitored in pharmacovigilance studies (PMV) in accordance with the rules of the European Medicines Agency (EMA)."
+    },
+    {
+         "bg": "rgba(221, 242, 246, 0.32)",
+        "bg-tag": "#A8D3F4",
+        "tag": "Project 04",
+        "name": "Project applications",
+        "src": "assets/images/index/projects/img4.png",
+        "text": "The ECFS educational resources support your continuing medical training. You will find interactive programmes you can attend in person or watch online."
+    }
+]
